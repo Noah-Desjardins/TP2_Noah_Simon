@@ -8,6 +8,7 @@ public class Joueur : MonoBehaviour
     void Start()
     {
         //Message du futur
+        //my god
     }
 
     // Update is called once per frame
