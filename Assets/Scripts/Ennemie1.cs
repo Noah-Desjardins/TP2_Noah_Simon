@@ -21,6 +21,7 @@ public class Ennemie1 : MonoBehaviour
         if (collision.tag == "Balle")
         {
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
