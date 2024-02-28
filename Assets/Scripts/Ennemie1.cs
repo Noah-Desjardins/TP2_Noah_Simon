@@ -18,10 +18,11 @@ public class Ennemie1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //permet la destruction de l'autobus et de la balle
         if (collision.tag == "Balle")
         {
-            Destroy(gameObject);
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
