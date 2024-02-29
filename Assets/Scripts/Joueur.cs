@@ -22,6 +22,10 @@ public class Joueur : MonoBehaviour
     [SerializeField] GameObject bullet;
     GameObject tireur;
 
+    //Vie Character
+    [SerializeField] int viePersoMax = 2;
+    int vie = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +79,18 @@ public class Joueur : MonoBehaviour
     public void Fire(InputAction.CallbackContext context)
     {
         fire = context.ReadValue<float>();  
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PowerUp")
+            vie++;
+        if (collision.tag == "Ennemi")
+        {
+            vie--;
+            if (vie == 0)
+                Destroy(gameObject);
+        }
+            
     }
 
 }

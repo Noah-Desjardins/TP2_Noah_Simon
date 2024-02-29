@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ennemie1 : MonoBehaviour
 {
+    [SerializeField] GameObject DyingAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Ennemie1 : MonoBehaviour
         //permet la destruction de l'autobus et de la balle
         if (collision.tag == "Balle")
         {
+            GameObject.Instantiate(DyingAnimation, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

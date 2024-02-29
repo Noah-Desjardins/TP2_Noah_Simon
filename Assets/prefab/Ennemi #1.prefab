@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f4d72e126ff654bb1b73ac73874391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DyingAnimation: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
 --- !u!61 &5263302577392982798
 BoxCollider2D:
   m_ObjectHideFlags: 0
