@@ -217,6 +217,8 @@ MonoBehaviour:
   vitessePersonnage: 5
   vitesseTir: 5
   bullet: {fileID: 8130695941216892469, guid: 5436ebd0c7785e54d819e303689b83d3, type: 3}
+  bullet2: {fileID: 418980962895292306, guid: 39faec117b349af448430894157c3397, type: 3}
+  bullet3: {fileID: 8218510867118476677, guid: ade8cc9b4d364b747a48bd9ad134b67d, type: 3}
   viePersoMax: 2
 --- !u!114 &469415643
 MonoBehaviour:
@@ -549,7 +551,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.37, y: 0.02, z: -6.4}
+  m_LocalPosition: {x: -0.02, y: 0.02, z: -6.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -584,7 +586,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87b835a212eb542afc929716447849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitX: 15
+  background: {fileID: 6681521885672473853, guid: d3d4a2b0604afe34e9387fd84ef8d333, type: 3}
+  Camera: {fileID: 963194225}
+  limitX: 11
   hauteurDepartennemie1: 11
   timeDepartennemie1: 3
   groupEnnemie1: {fileID: 6406752033332857239, guid: 7511843b60f4b0648b1eea18d8147956, type: 3}

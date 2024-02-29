@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //Background avec repetition
+    [SerializeField] GameObject background;
+
+    //Camera
+    [SerializeField] GameObject Camera;
+
     //limit d'apparition des ennemies
     [SerializeField] int limitX = 7;
     [SerializeField] float hauteurDepartennemie1 = 11f;
@@ -17,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         timeEnnemie1 = timeDepartennemie1;
+        GameObject.Instantiate(background,new Vector3(Camera.transform.position.x, Camera.transform.position.y, Camera.transform.position.z + 30) , Camera.transform.rotation);
     }
     // Update is called once per frame
     void Update()
@@ -32,5 +39,6 @@ public class GameManager : MonoBehaviour
             timeDepartennemie1 = timeEnnemie1;
 
         }
+
     }
 }

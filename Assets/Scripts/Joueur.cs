@@ -20,6 +20,8 @@ public class Joueur : MonoBehaviour
     float fireDelay = 0;
     [SerializeField] float vitesseTir = 5;
     [SerializeField] GameObject bullet;
+    [SerializeField] GameObject bullet2;
+    [SerializeField] GameObject bullet3;
     GameObject tireur;
 
     //Vie Character
@@ -66,7 +68,12 @@ public class Joueur : MonoBehaviour
     {
         if (fire > 0 && fireDelay <= 0)
         {
-            GameObject.Instantiate(bullet,tireur.transform.position, tireur.transform.rotation);
+            if (vie == 1)
+                GameObject.Instantiate(bullet,tireur.transform.position, tireur.transform.rotation);
+            if (vie == 2)
+                GameObject.Instantiate(bullet2, tireur.transform.position, tireur.transform.rotation);
+            if (vie == 3)
+                GameObject.Instantiate(bullet3, tireur.transform.position, tireur.transform.rotation);
             fireDelay = 1 / vitesseTir;
         }
         fireDelay -= Time.deltaTime;
@@ -82,7 +89,7 @@ public class Joueur : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PowerUp")
+        if (collision.tag == "PowerUp" && vie < 3)
             vie++;
         if (collision.tag == "Ennemi")
         {
