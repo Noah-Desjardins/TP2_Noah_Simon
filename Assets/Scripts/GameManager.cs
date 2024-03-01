@@ -28,24 +28,22 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //spawn les group d'ennemies 1
         timeDepartennemie1 -= Time.deltaTime;
         if (timeDepartennemie1 <= 0)
         {
             float x = Random.Range(-limitX, limitX);
             Vector2 position = new(x, hauteurDepartennemie1);
-            GameObject busTemp = ObjectPool.instance.GetPooledObject(groupEnnemie1);
+            GameObject busTemp =  ObjectPool.instance.GetPooledObject(groupEnnemie1);
             busTemp.transform.position = position;
             busTemp.transform.rotation = Quaternion.identity;
             busTemp.SetActive(true);
-               
-
-
-
             if (timeEnnemie1 > 3)
                 timeEnnemie1 -= 0.1f;
             timeDepartennemie1 = timeEnnemie1;
-
         }
+
+        //Spawn les group ennemies 2
 
     }
 }
