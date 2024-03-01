@@ -12,9 +12,11 @@ public class GroupEnnemi1 : MonoBehaviour
     [SerializeField] float vitesseDeplacementMax = 5;
     float vitesse = 0;
     Vector2 positionActuelle = Vector2.zero;
+    Ennemie1[] ennemis;
     // Start is called before the first frame update
     void Start()
     {
+        ennemis = GetComponentsInChildren<Ennemie1>();
         positionActuelle = transform.position;  
         if (positionActuelle.x < 0)
         {
@@ -36,7 +38,14 @@ public class GroupEnnemi1 : MonoBehaviour
         //detruit les enemie s'ils son plus bas que 12 dans les y
         if (transform.position.y <= -12)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+    }
+    public void Activer()
+    {
+        foreach (Ennemie1 ennemi in ennemis)
+        {
+            ennemi.gameObject.SetActive(true);
         }
     }
 }

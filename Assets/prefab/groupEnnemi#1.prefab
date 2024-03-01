@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7050044073201802572}
   - component: {fileID: 8551746835672561720}
+  - component: {fileID: -2042563389993865536}
   m_Layer: 0
   m_Name: groupEnnemi#1
   m_TagString: Untagged
@@ -51,6 +52,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesseDeplacementMin: 1
   vitesseDeplacementMax: 3
+--- !u!114 &-2042563389993865536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6406752033332857239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a764b20c08093414ebb99f1a1274b668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempsVie: 20
 --- !u!1001 &121954243233878531
 PrefabInstance:
   m_ObjectHideFlags: 0

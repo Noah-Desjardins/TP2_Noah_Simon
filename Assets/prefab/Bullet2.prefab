@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3130907513108582499}
+  - component: {fileID: 7940722108862850865}
   m_Layer: 0
   m_Name: Bullet2
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 7507315126733430423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7940722108862850865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418980962895292306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a764b20c08093414ebb99f1a1274b668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempsVie: 3
 --- !u!1 &5239215198069791456
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseBalle: 5
+  vitesseBalle: 8
 --- !u!61 &1628256362352342698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -337,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseBalle: 5
+  vitesseBalle: 8
 --- !u!61 &4825874821451040825
 BoxCollider2D:
   m_ObjectHideFlags: 0

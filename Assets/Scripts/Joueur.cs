@@ -69,11 +69,27 @@ public class Joueur : MonoBehaviour
         if (fire > 0 && fireDelay <= 0)
         {
             if (vie == 1)
-                GameObject.Instantiate(bullet,tireur.transform.position, tireur.transform.rotation);
+            {
+                GameObject bulletTemp1 = ObjectPool.instance.GetPooledObject(bullet);
+                bulletTemp1.transform.position = tireur.transform.position;
+                bulletTemp1.transform.rotation = tireur.transform.rotation;
+                bulletTemp1.SetActive(true);
+            }
             if (vie == 2)
-                GameObject.Instantiate(bullet2, tireur.transform.position, tireur.transform.rotation);
+            {
+                GameObject bulletTemp2 = ObjectPool.instance.GetPooledObject(bullet2);
+                bulletTemp2.transform.position = tireur.transform.position;
+                bulletTemp2.transform.rotation = tireur.transform.rotation;
+                bulletTemp2.SetActive(true);
+            }
             if (vie == 3)
-                GameObject.Instantiate(bullet3, tireur.transform.position, tireur.transform.rotation);
+            {
+                GameObject bulletTemp3 = ObjectPool.instance.GetPooledObject(bullet3);
+                bulletTemp3.transform.position = tireur.transform.position;
+                bulletTemp3.transform.rotation = tireur.transform.rotation;
+                bulletTemp3.SetActive(true);
+            }
+                
             fireDelay = 1 / vitesseTir;
         }
         fireDelay -= Time.deltaTime;

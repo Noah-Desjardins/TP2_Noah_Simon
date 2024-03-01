@@ -23,8 +23,8 @@ public class Ennemie1 : MonoBehaviour
         if (collision.tag == "Balle")
         {
             GameObject.Instantiate(DyingAnimation, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            collision.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

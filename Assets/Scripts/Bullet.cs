@@ -16,9 +16,5 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(transform.up * Time.deltaTime * vitesseBalle, Space.World);
-        if(transform.position.y > limitY)
-        {
-            Destroy(gameObject);
-        }
     }
 }

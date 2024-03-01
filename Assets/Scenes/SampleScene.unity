@@ -567,6 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1913877840}
   - component: {fileID: 1913877839}
+  - component: {fileID: 1913877841}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -607,11 +608,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913877841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913877838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e95494065468d4ebc84925f1efc1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetsAPool:
+  - {fileID: 8130695941216892469, guid: 5436ebd0c7785e54d819e303689b83d3, type: 3}
+  - {fileID: 418980962895292306, guid: 39faec117b349af448430894157c3397, type: 3}
+  - {fileID: 8218510867118476677, guid: ade8cc9b4d364b747a48bd9ad134b67d, type: 3}
+  - {fileID: 6406752033332857239, guid: 7511843b60f4b0648b1eea18d8147956, type: 3}
+  nombreAPool: 1b0000001b0000001b00000008000000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1913877840}
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1913877840}
   - {fileID: 466631908}

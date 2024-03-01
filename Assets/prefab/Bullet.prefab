@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6550717175907525641}
   - component: {fileID: -1032331817187987272}
   - component: {fileID: -7005398622890407088}
+  - component: {fileID: 9041861854713860001}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Balle
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseBalle: 5
+  vitesseBalle: 8
 --- !u!61 &-7005398622890407088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92,6 +93,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &9041861854713860001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130695941216892469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a764b20c08093414ebb99f1a1274b668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempsVie: 3
 --- !u!1001 &8548923827326097404
 PrefabInstance:
   m_ObjectHideFlags: 0
