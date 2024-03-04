@@ -45,14 +45,7 @@ public class GroupEnnemi1 : MonoBehaviour
     void OnEnable()
     {
         for (int i = 0; i < ennemis.Count; i++)
-        {
             if (!ennemis[i].gameObject.activeInHierarchy)
-            {
-                print("Avant: " + ennemis[i].gameObject.activeInHierarchy);
                 ennemis[i].gameObject.SetActive(true);
-                print("Apres: " + ennemis[i].gameObject.activeInHierarchy);
-            }
-
-        }
     }
 }

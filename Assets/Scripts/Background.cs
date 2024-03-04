@@ -6,14 +6,15 @@ public class Background : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float vitesseDefilement = 2;
-    void Start()
+    [SerializeField] new Renderer renderer;
+    private void Start()
     {
-        
+        renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.down * Time.deltaTime * vitesseDefilement);
+        renderer.material.mainTextureOffset = new Vector2(Time.time * vitesseDefilement,0);
     }
 }
