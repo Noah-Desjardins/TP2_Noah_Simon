@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357381045012350814}
-  - component: {fileID: 3635660579775232297}
   - component: {fileID: 5537682973923422753}
+  - component: {fileID: 2715656024586057428}
   m_Layer: 0
   m_Name: Bullet (1)
   m_TagString: Balle
@@ -34,19 +34,6 @@ Transform:
   - {fileID: 8711764471091735718}
   m_Father: {fileID: 2331384392428857299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3635660579775232297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829268822972171873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseBalle: 8
 --- !u!61 &5537682973923422753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92,6 +79,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &2715656024586057428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829268822972171873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 0
 --- !u!1 &3688486901528126541
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,8 +101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225790232309558900}
-  - component: {fileID: 8605296942902592726}
   - component: {fileID: 792611277563147044}
+  - component: {fileID: 8597427560640399468}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Balle
@@ -126,19 +126,6 @@ Transform:
   - {fileID: 3847617208443955564}
   m_Father: {fileID: 2331384392428857299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8605296942902592726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3688486901528126541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseBalle: 8
 --- !u!61 &792611277563147044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,6 +171,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &8597427560640399468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688486901528126541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 0
 --- !u!1 &4195883098318540525
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +276,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 272886196366550083}
-  - component: {fileID: 9043252351361329809}
   - component: {fileID: 8790618702235178338}
+  - component: {fileID: 4236291402282020153}
   m_Layer: 0
   m_Name: Bullet (2)
   m_TagString: Balle
@@ -301,19 +301,6 @@ Transform:
   - {fileID: 1357414146987101892}
   m_Father: {fileID: 2331384392428857299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9043252351361329809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5598483841350173916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseBalle: 8
 --- !u!61 &8790618702235178338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -359,6 +346,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &4236291402282020153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598483841350173916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 0
 --- !u!1 &8218510867118476677
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +369,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2331384392428857299}
   - component: {fileID: -111869828240402837}
+  - component: {fileID: 725293579620636810}
+  - component: {fileID: 6246919954055348792}
   m_Layer: 0
   m_Name: Bullet3
   m_TagString: Untagged
@@ -407,6 +409,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempsVie: 3
+--- !u!114 &725293579620636810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218510867118476677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 5
+--- !u!114 &6246919954055348792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218510867118476677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416830d68341f7a4b855da07ad41f175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8354153607528749503
 GameObject:
   m_ObjectHideFlags: 0

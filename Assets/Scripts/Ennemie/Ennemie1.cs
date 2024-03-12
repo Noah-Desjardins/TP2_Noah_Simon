@@ -12,6 +12,8 @@ public class Ennemie1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        joueur = GameObject.FindObjectOfType<Joueur>();
+        score = GameObject.FindObjectOfType<Score>();
     }
 
     // Update is called once per frame

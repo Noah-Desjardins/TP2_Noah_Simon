@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PowerUps : MonoBehaviour
 {
-    [SerializeField] float vitesseBalle = 5;
+    [SerializeField] float vitesse = 1;
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.up * Time.deltaTime * vitesseBalle, Space.World);
+        transform.Translate(Vector2.down * vitesse * Time.deltaTime);
     }
 }

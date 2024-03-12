@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
-    int score = 0;
+    public int score = 0;
 
     // Update is called once per frame
     public void Agmenter()

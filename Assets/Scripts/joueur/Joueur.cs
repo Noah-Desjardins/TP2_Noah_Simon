@@ -103,6 +103,7 @@ public class Joueur : MonoBehaviour
             {
                 GameObject bulletTemp3 = ObjectPool.instance.GetPooledObject(bullet3);
                 bulletTemp3.transform.position = tireur.transform.position;
+                print(bulletTemp3.transform.position);
                 bulletTemp3.transform.rotation = tireur.transform.rotation;
                 bulletTemp3.SetActive(true);
             }
@@ -123,12 +124,17 @@ public class Joueur : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "PowerUp" && vie < 3)
+        {
             vie++;
+            Destroy(collision.gameObject);
+        }
+           
         if (collision.tag == "Projectile")
         {
             Toucher();
             Destroy(collision.gameObject);
         }
+       
 
     }
 

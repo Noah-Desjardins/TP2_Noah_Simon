@@ -20,11 +20,19 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject groupEnnemie1;
     [SerializeField] GameObject groupEnnemie2;
+    [SerializeField] GameObject powerUp;
+
+    [SerializeField] float frequencePowerUps = 15;
+    float actualScorePowerUps;
+    Score score;
 
     private void Start()
     {
         timeEnnemie1 = timeDepartennemie1;
         timeEnnemie2 = timeDepartennemie2;
+        score = GameObject.FindObjectOfType<Score>();
+        actualScorePowerUps = frequencePowerUps;
+
     }
     // Update is called once per frame
     void Update()
@@ -58,5 +66,18 @@ public class GameManager : MonoBehaviour
                 timeEnnemie2 -= 0.1f;
             timeDepartennemie2 = timeEnnemie2;
         }
+
+        //Spawn les power ups à tout les x (frequencePowerUps) ennemis
+        if (score.score % actualScorePowerUps == 0 && score.score != 0)
+        {
+            actualScorePowerUps += frequencePowerUps;
+            float x = Random.Range(-limitX, limitX);
+            Vector2 position = new(x, hauteurDepartennemie1);
+            GameObject powerUpTemp = ObjectPool.instance.GetPooledObject(powerUp);
+            powerUpTemp.transform.position = position;
+            powerUpTemp.transform.rotation = Quaternion.identity;
+            powerUpTemp.SetActive(true);
+        }
+
     }
 }

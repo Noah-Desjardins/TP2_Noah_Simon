@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3130907513108582499}
   - component: {fileID: 7940722108862850865}
+  - component: {fileID: -7679601860129348795}
+  - component: {fileID: 2248759968634099023}
   m_Layer: 0
   m_Name: Bullet2
   m_TagString: Untagged
@@ -47,6 +49,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempsVie: 3
+--- !u!114 &-7679601860129348795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418980962895292306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416830d68341f7a4b855da07ad41f175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2248759968634099023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418980962895292306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 5
 --- !u!1 &5239215198069791456
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,8 +83,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7507315126733430423}
-  - component: {fileID: 8248839716189749425}
   - component: {fileID: 1628256362352342698}
+  - component: {fileID: 763867476960976249}
   m_Layer: 0
   m_Name: Bullet (1)
   m_TagString: Balle
@@ -81,19 +108,6 @@ Transform:
   - {fileID: 8420953627059910178}
   m_Father: {fileID: 3130907513108582499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8248839716189749425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5239215198069791456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseBalle: 8
 --- !u!61 &1628256362352342698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,6 +153,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &763867476960976249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239215198069791456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 0
 --- !u!1 &6747051270831509039
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,8 +341,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4230557141544163635}
-  - component: {fileID: 996932855146898337}
   - component: {fileID: 4825874821451040825}
+  - component: {fileID: 7552642498564782590}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Balle
@@ -339,19 +366,6 @@ Transform:
   - {fileID: 4405159888956789897}
   m_Father: {fileID: 3130907513108582499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &996932855146898337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117137524174247667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseBalle: 8
 --- !u!61 &4825874821451040825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -397,3 +411,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &7552642498564782590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117137524174247667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5aace379b7164a9a797e8b3649635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseBalle: 0
