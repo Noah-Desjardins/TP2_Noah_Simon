@@ -21,7 +21,6 @@ public class GroupBullet2 : MonoBehaviour
     {
         foreach (Bullet bullet in bullets)
         {
-            print(bullets.Count);
              if (!bullet.gameObject.activeInHierarchy)
                  bullet.gameObject.SetActive(true);
         }
