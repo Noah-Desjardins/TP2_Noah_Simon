@@ -29,6 +29,9 @@ public class Joueur : MonoBehaviour
 
     //Mort
     [SerializeField] GameObject joueurMort;
+    [SerializeField] GameObject blood;
+
+    [SerializeField] bool godMode = false;
 
     // Start is called before the first frame update
     void Start()
@@ -73,11 +76,15 @@ public class Joueur : MonoBehaviour
 
     public void Toucher()
     {
-        vie--;
-        if (vie == 0)
+        if (!godMode)
         {
-            Destroy(gameObject);
-            GameObject.Instantiate(joueurMort, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
+            vie--;
+            if (vie == 0)
+            {
+                Destroy(gameObject);
+                GameObject.Instantiate(blood, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+                GameObject.Instantiate(joueurMort, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
+            }
         }
     }
 
