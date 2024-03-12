@@ -909,13 +909,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87b835a212eb542afc929716447849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossMode: 0
   limitX: 11
   hauteurDepartennemie1: 11
   timeDepartennemie1: 4
-  timeMinennemie1: 3
   timeDepartennemie2: 6
-  timeMinennemie2: 0
   groupEnnemie1: {fileID: 6406752033332857239, guid: 7511843b60f4b0648b1eea18d8147956, type: 3}
   groupEnnemie2: {fileID: 4306551244775431886, guid: 32608354e879bac4b83488b0a4103576, type: 3}
 --- !u!4 &1913877840
@@ -951,7 +948,6 @@ MonoBehaviour:
   - {fileID: 8218510867118476677, guid: ade8cc9b4d364b747a48bd9ad134b67d, type: 3}
   - {fileID: 6406752033332857239, guid: 7511843b60f4b0648b1eea18d8147956, type: 3}
   - {fileID: 4306551244775431886, guid: 32608354e879bac4b83488b0a4103576, type: 3}
-<<<<<<< Updated upstream
   nombreAPool: 1b0000001b0000001b0000000800000008000000
 --- !u!1001 &2038292926
 PrefabInstance:
@@ -1010,10 +1006,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e524b432f0861c8488044126091cc34a, type: 3}
-=======
-  - {fileID: 8848909103005677880, guid: 5c6f33d9172a5224cb5a68d030f61e20, type: 3}
-  nombreAPool: 1b0000001b0000001b00000008000000e803000005000000
->>>>>>> Stashed changes
 --- !u!4 &170114237340188671
 Transform:
   m_ObjectHideFlags: 0
@@ -1422,7 +1414,4 @@ SceneRoots:
   - {fileID: 945938161493000289}
   - {fileID: 140662686}
   - {fileID: 124803202}
-<<<<<<< Updated upstream
   - {fileID: 2038292926}
-=======
->>>>>>> Stashed changes

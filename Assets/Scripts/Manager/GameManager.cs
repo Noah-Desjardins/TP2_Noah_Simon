@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] bool bossMode = false;
+
 
     //limit d'apparition des ennemies
     [SerializeField] int limitX = 7;
@@ -12,12 +12,10 @@ public class GameManager : MonoBehaviour
 
     //temps avant prochain group d'ennemie 1 apparait
     [SerializeField] float timeDepartennemie1 = 5f;
-    [SerializeField] float timeMinennemie1 = 0f;
     float timeEnnemie1;
 
     //temps avant prochain group d'ennemie 2 apparait
     [SerializeField] float timeDepartennemie2 = 5f;
-    [SerializeField] float timeMinennemie2 = 2f;
     float timeEnnemie2;
 
     [SerializeField] GameObject groupEnnemie1;
@@ -25,12 +23,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (!bossMode)
-        {
-            timeMinennemie1 = 3;
-            timeMinennemie2 = 2;
-        }
-
         timeEnnemie1 = timeDepartennemie1;
         timeEnnemie2 = timeDepartennemie2;
     }
@@ -47,7 +39,7 @@ public class GameManager : MonoBehaviour
             busTemp.transform.position = position;
             busTemp.transform.rotation = Quaternion.identity;
             busTemp.SetActive(true);
-            if (timeEnnemie1 > timeMinennemie1)
+            if (timeEnnemie1 > 3)
                 timeEnnemie1 -= 0.2f;
             timeDepartennemie1 = timeEnnemie1;
         }
@@ -62,27 +54,9 @@ public class GameManager : MonoBehaviour
             metroidTemp.transform.position = position;
             metroidTemp.transform.rotation = Quaternion.identity;
             metroidTemp.SetActive(true);
-            if (timeEnnemie2 > timeMinennemie2)
+            if (timeEnnemie2 > 2)
                 timeEnnemie2 -= 0.1f;
             timeDepartennemie2 = timeEnnemie2;
         }
-<<<<<<< Updated upstream
-=======
-
-        //Spawn les power ups à tout les x (frequencePowerUps) ennemis
-        
-        if (score.score >= actualScorePowerUps && score.score != 0)
-        {
-            print(actualScorePowerUps);
-            actualScorePowerUps += frequencePowerUps;
-            float x = Random.Range(-limitX, limitX);
-            Vector2 position = new(x, hauteurDepartennemie1);
-            GameObject powerUpTemp = ObjectPool.instance.GetPooledObject(powerUp);
-            powerUpTemp.transform.position = position;
-            powerUpTemp.transform.rotation = Quaternion.identity;
-            powerUpTemp.SetActive(true);
-        }
-
->>>>>>> Stashed changes
     }
 }
