@@ -70,7 +70,6 @@ public class GameManager : MonoBehaviour
         //Spawn les power ups à tout les x (frequencePowerUps) ennemis
         if (score.score % actualScorePowerUps == 0 && score.score != 0)
         {
-            print(actualScorePowerUps);
             actualScorePowerUps += frequencePowerUps;
             float x = Random.Range(-limitX, limitX);
             Vector2 position = new(x, hauteurDepartennemie1);

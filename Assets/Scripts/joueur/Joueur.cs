@@ -30,8 +30,6 @@ public class Joueur : MonoBehaviour
     //Mort
     [SerializeField] GameObject joueurMort;
 
-    [SerializeField] bool godMode = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -75,16 +73,12 @@ public class Joueur : MonoBehaviour
 
     public void Toucher()
     {
-        if (!godMode)
+        vie--;
+        if (vie == 0)
         {
-            vie--;
-            if (vie == 0)
-            {
-                Destroy(gameObject);
-                GameObject.Instantiate(joueurMort, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
-            }
+            Destroy(gameObject);
+            GameObject.Instantiate(joueurMort, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
         }
-        
     }
 
     public void GererArme()
@@ -109,6 +103,7 @@ public class Joueur : MonoBehaviour
             {
                 GameObject bulletTemp3 = ObjectPool.instance.GetPooledObject(bullet3);
                 bulletTemp3.transform.position = tireur.transform.position;
+                print(bulletTemp3.transform.position);
                 bulletTemp3.transform.rotation = tireur.transform.rotation;
                 bulletTemp3.SetActive(true);
             }
@@ -131,7 +126,7 @@ public class Joueur : MonoBehaviour
         if (collision.tag == "PowerUp" && vie < 3)
         {
             vie++;
-            collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
         }
            
         if (collision.tag == "Projectile")
