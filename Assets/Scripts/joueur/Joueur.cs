@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Joueur : MonoBehaviour
     
@@ -39,13 +40,15 @@ public class Joueur : MonoBehaviour
     float vertExtent;
     float horzExtent;
 
+    Score score;
+
     [SerializeField] GameObject corpCerf;
     // Start is called before the first frame update
     void Start()
     {
         tailleSol = transform.localScale;
         tireur = GameObject.FindGameObjectWithTag("Tireur");
-
+        score = FindAnyObjectByType<Score>();
         //vertExtent retourne la moitier de la hauteur de l'écran
         //horzextent est la moitier de la largeur de l'écran
         //Tout ça pour définir les bornes de la caméra en (0,0)
@@ -107,10 +110,11 @@ public class Joueur : MonoBehaviour
             vie--;
             if (vie <= 0)
             {
-                Destroy(gameObject);
+                print(score.score);
                 //Source (Euler) https://discussions.unity.com/t/using-a-custom-rotation-in-instantiate/63336/2
                 GameObject.Instantiate(blood, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
                 GameObject.Instantiate(joueurMort, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
+                Destroy(gameObject);
             }
         }
     }

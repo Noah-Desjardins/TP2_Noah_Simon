@@ -12,12 +12,14 @@ public class GroupEnnemi1 : MonoBehaviour
     [SerializeField]float vitesseDeplacementMin = 1;
     [SerializeField] float vitesseDeplacementMax = 5;
     float vitesse = 0;
+    //Connaitre la position de depart de l'ennemi 
     Vector2 positionActuelle = Vector2.zero;
     List<Ennemie1> ennemis = new List<Ennemie1>();
     // Start is called before the first frame update
     void Start()
     {
         ennemis = GetComponentsInChildren<Ennemie1>().ToList();
+        //Si k'ennemi commence à droite il va à gaucehe t vice-versa
         positionActuelle = transform.position;  
         if (positionActuelle.x < 0)
         {
@@ -39,6 +41,7 @@ public class GroupEnnemi1 : MonoBehaviour
     void OnEnable()
     {
         vitesse = Random.Range(vitesseDeplacementMin, vitesseDeplacementMax);
+        //L'objet active ses enfants s'ils sont désactivé
         for (int i = 0; i < ennemis.Count; i++)
             if (!ennemis[i].gameObject.activeInHierarchy)
                 ennemis[i].gameObject.SetActive(true);

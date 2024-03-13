@@ -15,6 +15,7 @@ public class Background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Source: https://discussions.unity.com/t/endless-2d-background/97115/4
         renderer.material.mainTextureOffset = new Vector2(Time.time * vitesseDefilement,0);
     }
 }

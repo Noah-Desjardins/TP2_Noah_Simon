@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-
+    //Source: https://www.youtube.com/watch?v=TAGZxRMloyU&t=404s
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     public int score = 0;
 
