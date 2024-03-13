@@ -6,6 +6,7 @@ public class TTD : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float tempsVie = 3;
+    [SerializeField] float limiteY = -12;
     float tempsInit;
     void OnEnable()
     {
@@ -17,7 +18,8 @@ public class TTD : MonoBehaviour
     {
         if (Time.time > tempsInit + tempsVie)
             gameObject.SetActive(false);
-        if (gameObject.transform.position.y < -12)
+        //il n'y a pas juste du temps qui désactive l'objet il y a aussi sa position
+        if (gameObject.transform.position.y < limiteY)
             gameObject.SetActive(false);
     }
 }

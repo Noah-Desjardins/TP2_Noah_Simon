@@ -22,10 +22,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject groupEnnemie1;
     [SerializeField] GameObject groupEnnemie2;
-    [SerializeField] GameObject powerUp;
 
+    //power ups
+    [SerializeField] GameObject powerUp;
     [SerializeField] float frequencePowerUps = 15;
     float actualScorePowerUps;
+
+    //Score
     Score score;
 
     private void Start()
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
             busTemp.transform.position = position;
             busTemp.transform.rotation = Quaternion.identity;
             busTemp.SetActive(true);
+            //Pour augmenter la difficulter au cours de la partie
             if (timeEnnemie1 > timeMinennemie1)
                 timeEnnemie1 -= 0.2f;
             timeDepartennemie1 = timeEnnemie1;
@@ -64,12 +68,13 @@ public class GameManager : MonoBehaviour
             metroidTemp.transform.position = position;
             metroidTemp.transform.rotation = Quaternion.identity;
             metroidTemp.SetActive(true);
+            //Pour augmenter la difficulter au cours de la partie
             if (timeEnnemie2 > timeMinennemie2)
                 timeEnnemie2 -= 0.1f;
             timeDepartennemie2 = timeEnnemie2;
         }
 
-        //Spawn les power ups à tout les x (frequencePowerUps) ennemis
+        //Spawn les power ups à tout les x (frequencePowerUps) ennemis par rapport au score du joueur
         if (score.score >= actualScorePowerUps && score.score != 0)
         {
             actualScorePowerUps += frequencePowerUps;

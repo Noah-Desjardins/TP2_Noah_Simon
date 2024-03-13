@@ -31,27 +31,53 @@ public class Joueur : MonoBehaviour
     [SerializeField] GameObject joueurMort;
     [SerializeField] GameObject blood;
 
+    
+    [SerializeField] Camera cam;
+
     [SerializeField] bool godMode = false;
 
+    float vertExtent;
+    float horzExtent;
+
+    [SerializeField] GameObject corpCerf;
     // Start is called before the first frame update
     void Start()
     {
         tailleSol = transform.localScale;
         tireur = GameObject.FindGameObjectWithTag("Tireur");
+
+        //vertExtent retourne la moitier de la hauteur de l'écran
+        //horzextent est la moitier de la largeur de l'écran
+        //Tout ça pour définir les bornes de la caméra en (0,0)
+        //Source: https://discussions.unity.com/t/calculating-2d-camera-bounds/77081/2
+        vertExtent = cam.orthographicSize;
+        horzExtent = vertExtent * Screen.width / Screen.height;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Définir les bornes du personnage
+        if (transform.position.x > horzExtent)
+            transform.position = new Vector2(horzExtent,transform.position.y);
+        if (transform.position.x < -horzExtent)
+            transform.position = new Vector2(-horzExtent, transform.position.y);
+        if (transform.position.y > vertExtent)
+            transform.position = new Vector2(transform.position.x, vertExtent);
+        if (transform.position.y < -vertExtent)
+            transform.position = new Vector2(transform.position.x, -vertExtent);
+
+
+
+
+
         transform.Translate(direction * Time.deltaTime * vitessePersonnage,Space.Self);
 
         
         GererSaut();
         if (bullet != null)
             GererArme();
-        if (vie <= 0)
-            Destroy(gameObject);
 
         
     }
@@ -79,9 +105,10 @@ public class Joueur : MonoBehaviour
         if (!godMode)
         {
             vie--;
-            if (vie == 0)
+            if (vie <= 0)
             {
                 Destroy(gameObject);
+                //Source (Euler) https://discussions.unity.com/t/using-a-custom-rotation-in-instantiate/63336/2
                 GameObject.Instantiate(blood, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
                 GameObject.Instantiate(joueurMort, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
             }
@@ -110,7 +137,6 @@ public class Joueur : MonoBehaviour
             {
                 GameObject bulletTemp3 = ObjectPool.instance.GetPooledObject(bullet3);
                 bulletTemp3.transform.position = tireur.transform.position;
-                print(bulletTemp3.transform.position);
                 bulletTemp3.transform.rotation = tireur.transform.rotation;
                 bulletTemp3.SetActive(true);
             }
@@ -133,7 +159,7 @@ public class Joueur : MonoBehaviour
         if (collision.tag == "PowerUp" && vie < 3)
         {
             vie++;
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
            
         if (collision.tag == "Projectile")

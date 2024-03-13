@@ -6,6 +6,8 @@ public class TTL : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float tempsVie = 3;
+    [SerializeField] float limiteY = -12;
+
     float tempsInit;
     void Start()
     {
@@ -16,8 +18,9 @@ public class TTL : MonoBehaviour
     void Update()
     {
         if (Time.time > tempsInit + tempsVie)
-            Destroy(gameObject);
-        if (gameObject.transform.position.y < -12)
+            Destroy(gameObject);        
+        //il n'y a pas juste du temps qui désactive l'objet il y a aussi sa position
+        if (gameObject.transform.position.y < limiteY)
             Destroy(gameObject);
     }
 }
